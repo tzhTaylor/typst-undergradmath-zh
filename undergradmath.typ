@@ -321,7 +321,7 @@ $ cosec x = 1 / (sin x) $
     [$prec.eq$], [`prec.eq`], [$minus.circle$], [`minus.cirle`], [$planck.reduce$], [`planck.reduce`],
     [$succ$], [`succ`], [$dot.circle$], [`dot.circle`], [$compose$], [`compose`],
     [$succ.eq$], [`succ.eq`], [$times.circle$], [`times.circle`], [$star$], [`star`],
-    [$prop$], [`prop`], [$\u{2298}$], [`\u{2298}` @tricky], [$sqrt(2)$], [`sqrt(2)`],
+    [$prop$], [`prop`], [$\u{2298}$], [`\u{2298}` @tricky], [$sqrt("")$], [`sqrt("")`],
     [$\u{2250}$], [`\u{2250}` @tricky], [$harpoon.tr$], [`harpoon.tr`], [$checkmark$], [`checkmark`],
   ),
 )
