@@ -52,7 +52,7 @@
 // Unavailable (last check version)
 #show "??": box(text(red, [v#sys.version #emoji.crossmark]))
 // Tricky
-#show "!!": box(text(blue, emoji.drops))
+#show "!!": box(text(blue, emoji.drops, size: 0.7em))
 // No idea
 #show "?!": box(text(orange, [No idea #emoji.face.unhappy]))
 // Tricky figure numbering
@@ -165,7 +165,7 @@ $ cal(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) $
   table(
     columns: 4,
     align: (right, left, right, left),
-    column-gutter: (1em, 1.5em, 1em),
+    column-gutter: (1em, 3em, 1em),
     [$alpha$], [`alpha`], [$xi$, $Xi$], [`xi`, `Xi`],
     [$beta$], [`beta`], [$omicron$], [`omicron`],
     [$gamma$, $Gamma$], [`gamma`, `Gamma`], [$pi$, $Pi$], [`pi`, `Pi`],
@@ -190,7 +190,7 @@ $ cal(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) $
   table(
     columns: 6,
     align: (right, left, right, left, right, left),
-    column-gutter: (1em, 1.5em, 1em, 1.5em, 1em),
+    column-gutter: (1em, 2.5em, 1em, 2.5em, 1em),
     [$union$], [`union`], [$RR$], [`RR`, `bb(R)`], [$forall$], [`forall`],
     [$inter$], [`inter`], [$bb(Z)$], [`ZZ`, `bb(Z)`], [$exists$], [`exists`],
     [$subset$], [`subset`], [$bb(Q)$], [`QQ`, `bb(Q)`], [$not$], [`not`],
@@ -275,7 +275,7 @@ $ cal(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) $
   table(
     columns: 6,
     align: (right, left, right, left, right, left),
-    column-gutter: (1em, 1.5em, 1em, 1.5em, 1em),
+    column-gutter: (1em, 2.5em, 1em, 2em, 1em),
     [$sin$], [`sin`], [$sinh$], [`sinh`], [$arcsin$], [`arcsin`],
     [$cos$], [`cos`], [$cosh$], [`cosh`], [$arccos$], [`arccos`],
     [$tan$], [`tan`], [$tanh$], [`tanh`], [$arctan$], [`arctan`],
@@ -305,8 +305,8 @@ $ cosec x = 1 / (sin x) $
   center,
   table(
     columns: 6,
-    align: (right, left, right, left, right, left),
-    column-gutter: (0.5em, 1em, 0.5em, 1em, 0.5em),
+    align: (center, left, center, left, center, left),
+    column-gutter: (0.5em, 1.2em, 0.5em, 1.2em, 0.5em),
     [$<$], [`<`, `lt`], [$angle$], [`angle`], [$dot$], [`dot`],
     [$<=$], [`<=`, `lt.eq`], [$angle.arc$], [`angle.arc`], [$plus.minus$], [`plus.minus`],
     [$>$], [`>`, `gt`], [$ell$], [`ell`], [$minus.plus$], [`minus.plus`],
@@ -321,7 +321,7 @@ $ cosec x = 1 / (sin x) $
     [$prec.eq$], [`prec.eq`], [$minus.circle$], [`minus.cirle`], [$planck.reduce$], [`planck.reduce`],
     [$succ$], [`succ`], [$dot.circle$], [`dot.circle`], [$compose$], [`compose`],
     [$succ.eq$], [`succ.eq`], [$times.circle$], [`times.circle`], [$star$], [`star`],
-    [$prop$], [`prop`], [$\u{2298}$], [`\u{2298}` @tricky], [$sqrt("")$], [`sqrt("")`],
+    [$prop$], [`prop`], [$\u{2298}$], [`\u{2298}` @tricky], [$sqrt(2)$], [`sqrt(2)`],
     [$\u{2250}$], [`\u{2250}` @tricky], [$harpoon.tr$], [`harpoon.tr`], [$checkmark$], [`checkmark`],
   ),
 )
@@ -360,7 +360,7 @@ $ sum_(j = 0)^3 j^2 wide integral_(x = 0)^3 x^2 dif x $
   table(
     columns: 4,
     align: (right, left, right, left),
-    column-gutter: (1em, 1.5em, 1em),
+    column-gutter: (1em, 2.5em, 1em),
     row-gutter: 0.5em,
     [$integral$], [`integral`], [$integral.double$], [`integral.double`],
     [$integral.triple$], [`integral.triple`], [$integral.cont$], [`integral.cont`],
@@ -373,8 +373,8 @@ $ sum_(j = 0)^3 j^2 wide integral_(x = 0)^3 x^2 dif x $
   center,
   table(
     columns: 6,
-    align: (right, left, right, left, right, left),
-    column-gutter: (1em, 1.5em, 1em, 1.5em, 1em),
+    align: (center, left, center, left, center, left),
+    column-gutter: (1em, 2.5em, 1em, 1.5em, 1em),
     row-gutter: 0.5em,
     [$()$], [`()`], [$angle.l angle.r$], [`angle.l angle.r`], [$abs("")$], [`abs("")`],
     [$[]$], [`[]`], [$floor("")$], [`floor("")`], [$norm("")$], [`norm("")`],
