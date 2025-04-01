@@ -5,9 +5,7 @@
 #let headcolor = rgb("004225")
 
 // Margin and footer
-#set page(
-  margin: 0.5in,
-)
+#set page(margin: 0.5in)
 
 // Font size
 #let scriptsize = 7pt
@@ -32,20 +30,21 @@
 #set table(stroke: none, align: horizon + left, inset: 0pt, row-gutter: 0.45em)
 
 // LaTeX and TeX logos
-#let TeX = style(styles => {
-  let e = measure(text(normalsize, "E"), styles)
+#let TeX = context {
+  let e = measure(text(normalsize, "E"))
   let T = "T"
   let E = text(normalsize, baseline: e.height / 2, "E")
   let X = "X"
   box(T + kern(-0.1667em) + E + kern(-0.125em) + X)
-})
-#let LaTeX = style(styles => {
-  let l = measure(text(10pt, "L"), styles)
-  let a = measure(text(7pt, "A"), styles)
+}
+
+#let LaTeX = context {
+  let l = measure(text(10pt, "L"))
+  let a = measure(text(7pt, "A"))
   let L = "L"
   let A = text(7pt, baseline: a.height - l.height, "A")
   box(L + kern(-0.36em) + A + kern(-0.15em) + TeX)
-})
+}
 
 // Update date
 #let date = datetime.today().display()
@@ -57,9 +56,11 @@
 // No idea
 #show "?!": box(text(orange, [No idea #emoji.face.unhappy]))
 // Tricky figure numbering
-#set figure(numbering: n => {
-  ([??], [!!], [?!]).at(n)
-})
+#set figure(
+  numbering: n => {
+    ([??], [!!], [?!]).at(n)
+  },
+)
 // No prefix
 #set ref(supplement: "")
 
@@ -131,14 +132,14 @@
 #align(
   center,
   table(
-  columns: 4,
-  align: (right, left, right, left),
-  column-gutter: (1em, 1.5em, 1em),
-  [$x^2$], [`x^2`],
-  [$sqrt(2)$, $root(n, 3)$], [`sqrt(2)`, `root(n, 3)`],
-  [$x_(i, j)$], [`x_(i, j)`],
-  [$2 / 3$, $2 \/ 3$], [`2 / 3`, `2 \/ 3` or `2 slash 3`], // Maybe use `slash`?
-),
+    columns: 4,
+    align: (right, left, right, left),
+    column-gutter: (1em, 1.5em, 1em),
+    [$x^2$], [`x^2`],
+    [$sqrt(2)$, $root(n, 3)$], [`sqrt(2)`, `root(n, 3)`],
+    [$x_(i, j)$], [`x_(i, j)`],
+    [$2 / 3$, $2 \/ 3$], [`2 / 3`, `2 \/ 3` or `2 slash 3`], // Maybe use `slash`?
+  ),
 )
 
 = 书法字母
@@ -191,7 +192,7 @@ $ cal(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) $
     align: (right, left, right, left, right, left),
     column-gutter: (1em, 1.5em, 1em, 1.5em, 1em),
     [$union$], [`union`], [$RR$], [`RR`, `bb(R)`], [$forall$], [`forall`],
-    [$sect$], [`sect`], [$bb(Z)$], [`ZZ`, `bb(Z)`], [$exists$], [`exists`],
+    [$inter$], [`inter`], [$bb(Z)$], [`ZZ`, `bb(Z)`], [$exists$], [`exists`],
     [$subset$], [`subset`], [$bb(Q)$], [`QQ`, `bb(Q)`], [$not$], [`not`],
     [$subset.eq$], [`subset.eq`], [$bb(N)$], [`NN`, `bb(N)`], [$or$], [`or`],
     [$supset$], [`supset`], [$bb(C)$], [`CC`, `bb(C)`], [$and$], [`and`],
@@ -265,6 +266,7 @@ $ cal(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) $
 在求和或乘积中使用居中点号表示为 $1 + dots.h.c + 100$，输入为 `1 + dots.h.c + 100`。
 您还可以使用垂直点号 `dots.v`，对角线点号 `dots.down` 和反对角线点号 `dots.up`。
 
+
 = 函数名称
 直接输入！
 
@@ -312,7 +314,7 @@ $ cosec x = 1 / (sin x) $
     [$!=$], [`!=`, `eq.not`], [$45 degree$], [`45 degree`], [$div$], [`div`],
     [$<<$], [`<<`, `lt.double`], [$tilde.equiv$], [`tilde.equiv`], [$*$], [`*`, `ast`],
     [$>>$], [`>>`, `gt.double`], [$tilde.nequiv$], [`tilde.nequiv`], [$divides$], [`divides`],
-    [$approx$], [`approx`], [$tilde$], [`tilde`], [$divides.not$], [`divides.not`],
+    [$approx$], [`approx`], [$~$], [`~`], [$divides.not$], [`divides.not`],
     [$\u{224D}$], [`\u{224D}` @tricky], [$tilde.eq$], [`tilde.eq`], [$n!$], [`n!`],
     [$equiv$], [`equiv`], [$tilde.not$], [`tilde.not`], [$diff$], [`diff`],
     [$prec$], [`prec`], [$plus.circle$], [`plus.circle`], [$nabla$], [`nabla`],
@@ -362,7 +364,7 @@ $ sum_(j = 0)^3 j^2 wide integral_(x = 0)^3 x^2 dif x $
     row-gutter: 0.5em,
     [$integral$], [`integral`], [$integral.double$], [`integral.double`],
     [$integral.triple$], [`integral.triple`], [$integral.cont$], [`integral.cont`],
-    [$union.big$], [`union.big`], [$sect.big$], [`sect.big`],
+    [$union.big$], [`union.big`], [$inter.big$], [`inter.big`],
   ),
 )
 
