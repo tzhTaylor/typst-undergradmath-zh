@@ -189,7 +189,7 @@ $ cal(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) $
   center,
   table(
     columns: 6,
-    align: (right, left, right, left, right, left),
+    align: (center, left, center, left, center, left),
     column-gutter: (1em, 2.5em, 1em, 2.5em, 1em),
     [$union$], [`union`], [$RR$], [`RR`, `bb(R)`], [$forall$], [`forall`],
     [$inter$], [`inter`], [$bb(Z)$], [`ZZ`, `bb(Z)`], [$exists$], [`exists`],
@@ -314,7 +314,7 @@ $ cosec x = 1 / (sin x) $
     [$!=$], [`!=`, `eq.not`], [$45 degree$], [`45 degree`], [$div$], [`div`],
     [$<<$], [`<<`, `lt.double`], [$tilde.equiv$], [`tilde.equiv`], [$*$], [`*`, `ast`],
     [$>>$], [`>>`, `gt.double`], [$tilde.nequiv$], [`tilde.nequiv`], [$divides$], [`divides`],
-    [$approx$], [`approx`], [$~$], [`~`], [$divides.not$], [`divides.not`],
+    [$approx$], [`approx`], [$~$], [`~`, `tilde`], [$divides.not$], [`divides.not`],
     [$asymp$], [`asymp`], [$tilde.eq$], [`tilde.eq`], [$n!$], [`n!`],
     [$equiv$], [`equiv`], [$tilde.not$], [`tilde.not`], [$diff$], [`diff`],
     [$prec$], [`prec`], [$plus.circle$], [`plus.circle`], [$nabla$], [`nabla`],
