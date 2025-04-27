@@ -471,7 +471,7 @@ $ sum_(j = 0)^3 j^2 wide integral_(x = 0)^3 x^2 dif x $
   ),
 )
 
-在 Typst 中，#link("https://typst.app/docs/reference/typst/array")[array] 是一组数值，而在 #LaTeX 中，array 是没有括号的矩阵，相当于在 Typst 中使用 `$mat(delim: #none, ..)$`。
+在 Typst 中，#link("https://typst.app/docs/reference/foundations/array")[array] 是一组数值，而在 #LaTeX 中，array 是没有括号的矩阵，相当于在 Typst 中使用 `$mat(delim: #none, ..)$`。
 
 对于行列式，可以使用 `|A|`，文本运算符 $det$ `det` 或者 `mat(delim: "|", ..)`。
 
@@ -585,7 +585,7 @@ $ sum_(j = 0)^3 j^2 wide integral_(x = 0)^3 x^2 dif x $
       ```
     ],
 
-    [$ 9.8 thin "m/s"^2 $], [`9.8 thin "m/s"^2` @tricky],
+    [$ 9.8 thin "m" slash "s"^2 $], [`9.8 thin "m" slash "s"^2` @tricky],
     [$ lim_(h->0) (f(x+h)-f(x)) / h $],
     [
       ```
